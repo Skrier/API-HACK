@@ -1,7 +1,3 @@
-
-
-
-
 /* Styles the header */
 
 header h1, form {display: inline-block;
@@ -28,12 +24,12 @@ header > h1 {margin: 8px 0px 8px 0px;
 				       color: #fff;}
 .fa{float: right;}
 
-.fa:hover {height:40px;
-				  width:40px;
-				  background-width: 40px;
-				  background-height:40px;}
-
 #main {min-height: 600px;}
 
 .panel-primary {padding: 0em 2em 0em 2em;}
+
+/* Styles the Google Maps Container */
+
+iframe {height: 100%;
+		width: 100%;}
 
