@@ -47,6 +47,22 @@ function getInstagram (location){
 
 /*twitter Api*/
 
+function getPlaces (location) {
+     var parameters = {
+         
+     };
+     var twitResult = $.ajax({
+          
+     }).done(function(twitResult){
+     	f
+
+
+     }).fail(function(jqXHR, error, errorThrown){
+         $('').append('<p>'+error+'</p>')
+     });
+
+}
+
 
 /*Foursquare Api*/
 
