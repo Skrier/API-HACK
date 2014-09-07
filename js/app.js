@@ -15,7 +15,7 @@ $('#searchButton').on('mousedown', function (event) {
 $(document).find('input[name="search"]').on('keydown', function (pressenter) {
     if (pressenter.keyCode === 13) {
      search();
-    };
+    }
 });
 
 $('#aboutButton').on('mousedown', function(){
