@@ -18,19 +18,19 @@ header > h1 {margin: 8px 0px 8px 0px;
 
 #medCont2 {float: right;}
 
-.panel-info {min-height: 200px;}
+.panel-info {min-height: 250px;}
 
 .panel-primary, #main {background-color: #428bca;
 				       color: #fff;}
 .fa{float: right;}
 
-#main {min-height: 600px;}
+#main {min-height: 800px;}
 
 .panel-primary {padding: 0em 2em 0em 2em;}
 
 /* Styles the Google Maps Container */
 
-iframe {min-height: 200px;
+iframe {min-height: 250px;
 		height: 100%;
 		width: 100%;
 		frameborder:0;
