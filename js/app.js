@@ -34,6 +34,7 @@ function getGoogleMaps (location) {
 /*instagram Api*/
 
 function getInstagram (location){
+	$('#instafeed').children().remove();
     var feed = new Instafeed ({
           get: 'tagged',
           tagName: location,
