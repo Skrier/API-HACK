@@ -38,11 +38,11 @@ function getInstagram (location){
           get: 'tagged',
           tagName: location,
           clientId: '247fae46590145138b72d9e2d47d9231',
-          sortBy:'most-recent'
+          sortBy:'most-recent',
+          limit: 10,
     });
     feed.run();
 }
-
 
 /*twitter Api*/
 
