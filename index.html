@@ -17,46 +17,46 @@
 			    	<div class='form-group'>
 			    		<input type="text" class="form-control" name="search" placeholder='Search your location'>		
 			    	</div>
-			    	<button type="Submit" class='btn btn-default' id="searchButton">Search</button>
-			    	<button type="Submit" class="btn btn-default" id="aboutButton">About</button>
+			    	<button type="button" class='btn btn-default' id="searchButton">Search</button>
+			    	<button type="button" class="btn btn-default" id="aboutButton">About</button>
      	    	</form>
      	    	
 		    </header>
-
-		    <div> <!-- About Instructions Container -->
+            <!-- About Instructions Container -->
+		    <div> 
 
 		    		
 		    </div>
-
-		    <div id="main"> <!-- Main Body container -->
-
-		        <div class="mediaContainer" id="medCont1"><!-- Social Media Container-->
-
-				    <div class="panel panel-primary"> <!-- Instagram Container -->
+            <!-- Main Body container -->
+		    <div id="main"> 
+                <!-- Social Media Container-->
+		        <div class="mediaContainer" id="medCont1">
+                    <!-- Instagram Container -->
+				    <div class="panel panel-primary"> 
 				    	<h1>Instagram<i class="fa fa-instagram"></i></h1>	
-				    	<div class="panel panel-info"></div>
+				    	<div class="panel panel-info" id="instafeed"></div>
 
 				    </div>
-
-				    <div class="panel panel-primary"> <!-- twitter container  -->
+                    <!-- twitter container  -->
+				    <div class="panel panel-primary"> 
 				    	<h1>twitter<i class="fa fa-twitter"></i></h1>	
                         <div class="panel panel-info"></div>
 				    </div>
 
 				</div>
-
-				<div class="mediaContainer" id="medCont2"><!-- Info media Container -->
-
-				    <div class="panel panel-primary"> <!-- Foursquare Container -->
+                <!-- Info media Container -->
+				<div class="mediaContainer" id="medCont2">
+                   <!-- Foursquare Container -->
+				    <div class="panel panel-primary"> 
 				    	<h1>foursquare <i class='fa fa-foursquare'></i></h1>	
 				    	<div class="panel panel-info"></div>
 
 				    </div>
-
-				    <div class="panel panel-primary"><!-- Google Maps Container  -->
+                    <!-- Google Maps Container  -->
+				    <div class="panel panel-primary">
 				    	<h1>google maps<i class="fa fa-google"></i></h1>		
 						<div class="panel panel-info">
-							<iframe src="https://www.google.com/maps/embed/v1/search?key=AIzaSyA9R0s5sg2INloAiY9IHOruKNHQgrN1dS0&q=record+stores+in+Seattle"></iframe>
+							<iframe id="googleMap"></iframe>
 						</div>
 				    </div>
 
@@ -66,6 +66,7 @@
 
             <!-- JavaScript Files -->
 			<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+			<script type="text/javascript" src="js/instafeed.min.js"></script>
 			<script src='js/app.js'></script>
 		</body>
 </html>

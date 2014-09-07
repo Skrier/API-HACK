@@ -30,6 +30,9 @@ header > h1 {margin: 8px 0px 8px 0px;
 
 /* Styles the Google Maps Container */
 
-iframe {height: 100%;
-		width: 100%;}
+iframe {min-height:200px;
+		height: 120%;
+		width: 100%;
+		frameborder:0;
+		border: 0;}
 
