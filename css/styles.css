@@ -30,7 +30,7 @@ header > h1 {margin: 8px 0px 8px 0px;
 
 /* Styles the Google Maps Container */
 
-iframe {min-height:200px;
+iframe {min-height:190px;
 		height: 120%;
 		width: 100%;
 		frameborder:0;
@@ -38,6 +38,6 @@ iframe {min-height:200px;
 
 /* Styles the Instagram Container */
 
-#instafeed img {height: 95px;
-				width:95px;}
+#instafeed img {height: 96px;
+				width:96px;}
 
