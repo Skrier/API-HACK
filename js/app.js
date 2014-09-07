@@ -39,7 +39,7 @@ function getInstagram (location){
           tagName: location,
           clientId: '247fae46590145138b72d9e2d47d9231',
           sortBy:'most-recent',
-          limit: 10,
+          limit: 12
     });
     feed.run();
 }
