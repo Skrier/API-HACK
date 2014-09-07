@@ -1,0 +1,39 @@
+
+
+
+
+/* Styles the header */
+
+header h1, form {display: inline-block;
+					margin:auto;
+					position: relative;}
+
+header > h1 {margin: 8px 0px 8px 0px;
+			height: 34px;}
+
+
+/* Styles the Media Container */
+
+.mediaContainer {display: inline-block;
+				 width: 49%;
+				 }
+
+#medCont1 {float:left;}
+
+#medCont2 {float: right;}
+
+.panel-info {min-height: 200px;}
+
+.panel-primary, #main {background-color: #428bca;
+				       color: #fff;}
+.fa{float: right;}
+
+.fa:hover {height:40px;
+				  width:40px;
+				  background-width: 40px;
+				  background-height:40px;}
+
+#main {min-height: 600px;}
+
+.panel-primary {padding: 0em 2em 0em 2em;}
+
