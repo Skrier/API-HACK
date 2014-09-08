@@ -12,62 +12,67 @@
 		</head>
 		<body>
 		    <header class='page-header'>
-		   	    <h1>What's Happ</h1>
 		    	<form class="navbar-form" role='search'>
+		    	<h1>My English Premier League</h1>
 			    	<div class='form-group'>
-			    		<input type="text" class="form-control" name="search" placeholder='Search your location'>		
+			    		<input type="text" class="form-control" name="search" placeholder='Enter your team'>		
 			    	</div>
 			    	<button type="button" class='btn btn-default' id="searchButton">Search</button>
 			    	<button type="button" class="btn btn-default" id="aboutButton">About</button>
      	    	</form>
      	    	
 		    </header>
-            <!-- About Instructions Container -->
-		    <div> 
+            <!-- About Container -->
 
-		    		
+		  
+            <!-- Select your team Container -->
+            <div id="teamContainer">
+		        <div class="panel panel-success">
+		            <div class="panel-body">
+		            <h1>Select your team</h1>
+		            </div>	
+		            <div class="panel-footer">
+		            </div>
+
+		        </div>
 		    </div>
-            <!-- Main Body container -->
-		    <div id="main"> 
-                <!-- Social Media Container-->
-		        <div class="mediaContainer" id="medCont1">
-                    <!-- Instagram Container -->
-				    <div class="panel panel-primary"> 
-				    	<h1>Instagram<i class="fa fa-instagram"></i></h1>	
-				    	<div class="panel panel-info" id="instafeed"></div>
+            <!-- API Container --> 
+			<div id="apiContainer">
+                <!-- Live Scores -->
+				<div class="panel panel-danger">
+	            	<div class="panel-body">
+	                	<h1>Live Scores<i class="fa fa-refresh"></i></h1>
+	            	</div>	
+	            	<div class="panel-footer"></div>
+	            </div>
 
-				    </div>
-                    <!-- places container  -->
-				    <div class="panel panel-primary"> 
-				    	<h1>places<i class="fa fa fa-google"></i></h1>	
-                        <div class="panel panel-info">
-                        </div>
-				    </div>
+	            <!-- Live Commentary -->
+				<div class="panel panel-danger">
+	            	<div class="panel-body">
+	            		<h1>Live Commentary<i class="fa fa-refresh"></i></h1>
+	            	</div>	
+	            	<div class="panel-footer"></div>
+	            </div>
 
-				</div>
-                <!-- Info media Container -->
-				<div class="mediaContainer" id="medCont2">
-                   <!-- Foursquare Container -->
-				    <div class="panel panel-primary"> 
-				    	<h1>foursquare <i class='fa fa-foursquare'></i></h1>	
-				    	<div class="panel panel-info"></div>
+	            <!-- League table -->
+	            <div class="panel panel-danger">
+	            	<div class="panel-body">
+	            		<h1>League Table<i class="fa fa-refresh"></i></h1>
+	            	</div>	
+	            	<div class="panel-footer"></div>
+	            </div>
 
-				    </div>
-                    <!-- Google Maps Container  -->
-				    <div class="panel panel-primary">
-				    	<h1>google maps<i class="fa fa-google"></i></h1>		
-						<div class="panel panel-info">
-							<iframe id="googleMap"></iframe>
-						</div>
-				    </div>
+	            <!-- Fixtures -->
+	            <div class="panel panel-danger">
+	            	<div class="panel-body">
+	            		<h1>Fixtures<i class="fa fa-refresh"></i></h1>
+	            	</div>	
+	            	<div class="panel-footer"></div>
+	            </div>
 
-			    </div>
-		    	
-		    </div> 
-
+            </div>
             <!-- JavaScript Files -->
 			<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-			<script type="text/javascript" src="js/instafeed.min.js"></script>
 			<script src='js/app.js'></script>
 		</body>
 </html>

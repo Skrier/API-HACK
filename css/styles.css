@@ -1,43 +1,17 @@
-/* Styles the header */
-
-header h1, form {display: inline-block;
-					margin:auto;
-					position: relative;}
-
-header > h1 {margin: 8px 0px 8px 0px;
-			height: 34px;}
 
 
-/* Styles the Media Container */
+/* Styeles the API Container*/
 
-.mediaContainer {display: inline-block;
-				 width: 49%;
-				 }
+#teamContainer {width: 97.7%;}
 
-#medCont1 {float:left;}
+.panel-danger {display: inline-block;
+				width: 24.5%;
+				height: 100%;
+				min-height: 500px;
+				min-width:100px;  }
 
-#medCont2 {float: right;}
+#apiContainer, #teamContainer {margin-left: 1%;}
 
-.panel-info {min-height: 250px;}
+.fa-refresh {float: right;}
 
-.panel-primary, #main {background-color: #428bca;
-				       color: #fff;}
-.fa{float: right;}
-
-#main {min-height: 800px;}
-
-.panel-primary {padding: 0em 2em 0em 2em;}
-
-/* Styles the Google Maps Container */
-
-iframe {min-height: 250px;
-		height: 100%;
-		width: 100%;
-		frameborder:0;
-		border: 0;}
-
-/* Styles the Instagram Container */
-
-#instafeed img {height: 98px;
-				width:99px;}
-
+.panel {margin:0px 0px 0px 0px;}

@@ -2,84 +2,60 @@ $(document).ready( function () {
 
 /* Navbar buttons*/
 function search () {
-    var location = $(document).find('input[name="search"]').val();
-	getGoogleMaps(location);
-	getInstagram(location);
-	console.log(location);
+    var fTeam = $(document).find('input[name="search"]').val();
+    console.log(fTeam);
 }
 
 $('#searchButton').on('mousedown', function (event) { 
-    search();
+	search();
 });
 
-$(document).find('input[name="search"]').on('keydown', function (pressenter) {
-    if (pressenter.keyCode === 13) {
-     search();
-    }
+$(document).find('input[name="search"]').on('keydown', function (event) {
+	event.preventDefault();
+	event.stopPropagation();
+	if (event.which === 13) {
+    search();
+	}
 });
 
 $('#aboutButton').on('mousedown', function(){
 
+ });
 
+ /* football API */
 
-});
-/*Google Maps Api*/
+  /* Get Competitions */
 
-function getGoogleMaps (location) {
-	var key = 'AIzaSyA9R0s5sg2INloAiY9IHOruKNHQgrN1dS0';
-	var zoom = '16';
-	var iframeElement = $('#googleMap');
-	iframeElement.attr('src','https://www.google.com/maps/embed/v1/search?key=' + key + '&zoom=' + zoom + '&q='+location);
-}
-/*instagram Api*/
+var getCompetition = function () {
 
-function getInstagram (location){
-	$('#instafeed').children().remove();
-    var feed = new Instafeed ({
-          get: 'tagged',
-          tagName: location,
-          clientId: '247fae46590145138b72d9e2d47d9231',
-          sortBy:'most-recent',
-          limit: 12
-    });
-    feed.run();
-}
+	var request = {
+		APIKey:'6580f7ec-ffaa-823b-2165456a6091'
+	}
 
-/*twitter Api*/
+	var result = $.ajax({
+		url:'http://football-api.com/api/?Action=competitions',
+		data: request,
+		datatype: 'json',
+		method:'GET'
+	})
+	.done(function(result){
+     console.log(result);
 
-function getPlaces (location) {
-     var parameters = {
-         
-     };
-     var twitResult = $.ajax({
-          
-     }).done(function(twitResult){
-     	f
+	})
+	.fail(function(jqXHR, error, errorThrown){
 
+     console.log(error);
 
-     }).fail(function(jqXHR, error, errorThrown){
-         $('').append('<p>'+error+'</p>')
-     });
+	});
 
-}
-
-
-/*Foursquare Api*/
+};
 
 
 
-
-
-
-
+getCompetition();
 
 
 
 
 
 });
-
-
-
-
-
