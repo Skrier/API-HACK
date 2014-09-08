@@ -39,7 +39,7 @@ var getCompetition = function () {
 		method:'GET'
 	})
 	.done(function(result){
-     console.log(result);
+    
 
 	})
 	.fail(function(jqXHR, error, errorThrown){
