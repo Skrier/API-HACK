@@ -11,7 +11,6 @@ $('#searchButton').on('mousedown', function (event) {
 });
 
 $(document).find('input[name="search"]').on('keydown', function (event) {
-	event.preventDefault();
 	event.stopPropagation();
 	if (event.which === 13) {
     search();
@@ -22,28 +21,30 @@ $('#aboutButton').on('mousedown', function(){
 
  });
 
- /* football API */
+ /* google API */
 
-  /* Get Competitions */
+ function initialize() {
+  var mapOptions = {
+    zoom: 8,
+    center: new google.maps.LatLng(-34.397, 150.644)
+  };
 
-var getCompetition = function () {
-	var request = {
-		APIKey:'6580f7ec-ffaa-823b-2165456a6091'
-	}
-	var result = $.ajax({
-		url:'http://football-api.com/api/?Action=competitions',
-		data: request,
-		datatype: 'jsonp',
-		method:'GET'
-	})
-	.done(function(result){
-    console.log(result);
-	})
-	.fail(function(jqXHR, error, errorThrown){
-     console.log(error);
-	});
-};
-getCompetition();
+  var map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+}
+
+function loadScript() {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&' +
+      'callback=initialize';
+  document.body.appendChild(script);
+}
+
+window.onload = loadScript;
+
+ /* instgram Api */
+
 
 
 

@@ -2,23 +2,23 @@
 
 /* Styeles the API Container*/
 
-#teamContainer {width: 97.9%;}
-
 .panel-danger {display: inline-block;
-				width: 24.5%;
+				width: 49.5%;
 				height: 100%;
 				min-height: 500px;
 				min-width:100px;  }
 
 #apiContainer, #teamContainer {margin-left: 1%;}
 
-.fa-refresh {float: right;}
+.fa {float: right;}
 
 .panel, .panel-body {margin:0px 0px 0px 0px;}
 
 .fa-refresh:hover {background-color: red;}
 
-.apiHeader {font-size: 22px;}
+.apiHeader {font-size: 30px;
+			margin-top: 0px;
+			margin-bottom: 0px;}
 
 .panel-success {min-height: 200px;}
 
@@ -36,8 +36,6 @@ form > div {display: inline-block;
 
 header {text-align: center;
 		margin-top: 20px;}
-
-.form-control {min-width: 230px;}
 
 #imageHeader {text-align: center;}
 
