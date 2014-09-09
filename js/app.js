@@ -27,31 +27,22 @@ $('#aboutButton').on('mousedown', function(){
   /* Get Competitions */
 
 var getCompetition = function () {
-
 	var request = {
 		APIKey:'6580f7ec-ffaa-823b-2165456a6091',
-		OutputType: 'JSON'
 	}
-
 	var result = $.ajax({
 		url:'http://football-api.com/api/?Action=competitions',
 		data: request,
-		datatype: 'json',
+		datatype: 'jsonp',
 		method:'GET'
 	})
 	.done(function(result){
-    
-
+    console.log(result);
 	})
 	.fail(function(jqXHR, error, errorThrown){
-
      console.log(error);
-
 	});
-
 };
-
-
 
 getCompetition();
 
