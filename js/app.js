@@ -2,8 +2,10 @@ $(document).ready( function () {
 
 /* Navbar buttons*/
 function search () {
-    var fTeam = $(document).find('input[name="search"]').val();
-    console.log(fTeam);
+    var address= $(document).find('input[name="search"]').html();
+    console.log(address);
+    getGeoLocation(address);
+    iframe(address);
 }
 
 $('#searchButton').on('mousedown', function (event) { 
@@ -21,27 +23,30 @@ $('#aboutButton').on('mousedown', function(){
 
  });
 
- /* google API */
+/* google API */
 
- function initialize() {
-  var mapOptions = {
-    zoom: 8,
-    center: new google.maps.LatLng(-34.397, 150.644)
-  };
+var getGeoLocation = function (address) {
 
-  var map = new google.maps.Map(document.getElementById('map-canvas'),
-      mapOptions);
+	var params = {
+		key: 'AIzaSyA9R0s5sg2INloAiY9IHOruKNHQgrN1dS0',
+		address: address
+	};
+    var request = $.ajax({
+    	url: 'https://maps.googleapis.com/maps/api/geocode/json?',
+    	data: params,
+    	type: 'GET'
+    }).done(function(request){
+    	console.log(request.results[0].geometry.location.lat);
+    	console.log(request.results[0].geometry.location.lng);
+    }).fail(function (jqXHR, error, errorThrown){
+    	console.log(error);
+    });
+};
+
+function iframe (address) {
+		var iFrameLocation = $('<iframe>');
+		iFrameLocation.attr('src','https://www.google.com/maps/embed/v1/place?q=' +address+'&key=AIzaSyA9R0s5sg2INloAiY9IHOruKNHQgrN1dS0');
 }
-
-function loadScript() {
-  var script = document.createElement('script');
-  script.type = 'text/javascript';
-  script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&' +
-      'callback=initialize';
-  document.body.appendChild(script);
-}
-
-window.onload = loadScript;
 
  /* instgram Api */
 

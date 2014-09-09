@@ -26,22 +26,25 @@
             <!-- API Container --> 
 			<div id="apiContainer">
                 <!-- google maps -->
-				<div class="panel panel-danger">
+				<div class="panel panel-danger" id="mapsCont">
 	            	<div class="panel-body">
 	                	<h1 class="apiHeader">Google Maps<i class="fa fa-google"></i></h1>
 	            	</div>	
 	            	<div class="panel-footer"></div>
-	            	<div id="map-canvas"></div>
+	            	<div id="map">
+	            		<iframe width="100%" height="500px" frameborder="0" style="border:0"
+src="https://www.google.com/maps/embed/v1/place?q=Bournemouth,+United+Kingdom&key=AIzaSyA9R0s5sg2INloAiY9IHOruKNHQgrN1dS0"></iframe>
+
+	            	</div>
 	            </div>
 
 	            <!-- Instagram -->
-	            <div class="panel panel-danger">
+	            <div class="panel panel-danger" id="instagramCont">
 	            	<div class="panel-body">
 	            		<h1 class="apiHeader">Instagram<i class="fa fa-instagram"></i></h1>
 	            	</div>	
 	            	<div class="panel-footer"></div>
 	            </div>
-
             </div>
             <!-- JavaScript Files -->
 			<script src="http://code.jquery.com/jquery-latest.min.js"></script>
