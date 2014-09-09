@@ -43,7 +43,6 @@ var getCompetition = function () {
      console.log(error);
 	});
 };
-
 getCompetition();
 
 
