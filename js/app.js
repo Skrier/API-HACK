@@ -37,6 +37,7 @@ var getGeoLocation = function (address) {
     	data: params,
     	type: 'GET'
     }).done(function(request){
+    	console.log(request);
     	console.log(request.results.geometry.location.lat);
     	console.log(request.results.geometry.location.lng);
     }).fail(function (jqXHR, error, errorThrown){
