@@ -2,10 +2,11 @@ $(document).ready( function () {
 
 /* Navbar buttons*/
 function search () {
-    var address= $(document).find('input[name="search"]').val();
+    var address= $(document).find('input[name="search"]').html();
     console.log(address);
-    getGeoLocation(address);
     iframe(address);
+    getGeoLocation(address);
+    
 }
 
 $('#searchButton').on('mousedown', function (event) { 
@@ -44,7 +45,7 @@ var getGeoLocation = function (address) {
 };
 
 function iframe (address) {
-		var iFrameLocation = $('<iframe>');
+		var iFrameLocation = $('iframe');
 		iFrameLocation.attr('src','https://www.google.com/maps/embed/v1/place?q=' +address+'&key=AIzaSyA9R0s5sg2INloAiY9IHOruKNHQgrN1dS0');
 }
 
