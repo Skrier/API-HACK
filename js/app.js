@@ -2,7 +2,7 @@ $(document).ready( function () {
 
 /* Navbar buttons*/
 function search () {
-    var address= $(document).find('input[name="search"]').html();
+    var address= $(document).find('input[name="search"]').val();
     console.log(address);
     iframe(address);
     getGeoLocation(address);
