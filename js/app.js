@@ -41,7 +41,7 @@ var getGeoLocation = function (address) {
     })
     .done(function(request){
     	console.log(request);
-    	console.log(request.resourceSets);
+    	console.log(request.authenticationResultCode);
     })
     .fail(function (jqXHR, error, errorThrown){
     	console.log(error);
