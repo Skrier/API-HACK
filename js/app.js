@@ -32,11 +32,12 @@ var getGeoLocation = function (address) {
 		key: 'Atq5GRPbpmMXICsUMY6l2ILicZ3HNVgTqd0bVHPx8o5VCxWGadaKxUVArVrisehF',
 		locality: address,
 		maxResults: '1',
-		o:'jsonp'
+		o:'json&jsonp=?'
 	};
     var request = $.ajax({
     	url: 'http://dev.virtualearth.net/REST/v1/Locations?',
     	data: params,
+    	dataType: 'jsonp',
     	type: 'GET'
     }).done(function(request){
     	console.log(request);
