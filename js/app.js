@@ -24,22 +24,22 @@ $('#aboutButton').on('mousedown', function(){
 
  });
 
-/* google API */
+/* Bing API */
 
 var getGeoLocation = function (address) {
 
 	var params = {
-		key: 'AIzaSyA9R0s5sg2INloAiY9IHOruKNHQgrN1dS0',
-		address: address
+		key: 'Atq5GRPbpmMXICsUMY6l2ILicZ3HNVgTqd0bVHPx8o5VCxWGadaKxUVArVrisehF',
+		locality: address,
+		maxResults: '1'
 	};
     var request = $.ajax({
-    	url: 'https://maps.googleapis.com/maps/api/geocode/json?',
+    	url: 'http://dev.virtualearth.net/REST/v1/Locations?',
     	data: params,
     	type: 'GET'
     }).done(function(request){
     	console.log(request);
-    	console.log(request.results.geometry.location.lat);
-    	console.log(request.results.geometry.location.lng);
+    	console.log(request.resourceSets.resources.geocodePoints.coordinates);
     }).fail(function (jqXHR, error, errorThrown){
     	console.log(error);
     });
