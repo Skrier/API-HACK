@@ -37,7 +37,7 @@ var getGeoLocation = function (address) {
     	url: 'http://dev.virtualearth.net/REST/v1/Locations?',
     	data: params,
     	dataType: 'jsonp',
-    	type: 'GET'
+    	type: 'GET',
     })
     .done(function(request){
     	console.log(request);
