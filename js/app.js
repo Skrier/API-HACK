@@ -48,8 +48,8 @@ var getGeoLocation = function (address) {
     	console.log(request.resourceSets.resources.geocodePoints.coordinates);
     }).fail(function (jqXHR, error, errorThrown){
     	console.log(error);
-    });
-};*/
+    });*/
+};
 
 function iframe (address) {
 		var iFrameLocation = $('iframe');
