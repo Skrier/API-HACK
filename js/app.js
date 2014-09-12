@@ -36,6 +36,7 @@ var getGeoLocation = function (address) {
     var request = $.ajax({
     	url: 'http://dev.virtualearth.net/REST/v1/Locations?',
     	data: params,
+    	dataType: 'jsonp',
     	type: 'GET'
     }).done(function(request){
     	console.log(request);
