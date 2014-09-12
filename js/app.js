@@ -28,7 +28,11 @@ $('#aboutButton').on('mousedown', function(){
 
 var getGeoLocation = function (address) {
 
-	var params = {
+	$.getJSON('http://dev.virtualearth.net/REST/v1/Locations?locality' + address + 'key=Atq5GRPbpmMXICsUMY6l2ILicZ3HNVgTqd0bVHPx8o5VCxWGadaKxUVArVrisehF&o=json&jsonp=?', function () {
+    alert('works!');
+});
+
+/*	var params = {
 		key: 'Atq5GRPbpmMXICsUMY6l2ILicZ3HNVgTqd0bVHPx8o5VCxWGadaKxUVArVrisehF',
 		locality: address,
 		maxResults: '1',
@@ -45,7 +49,7 @@ var getGeoLocation = function (address) {
     }).fail(function (jqXHR, error, errorThrown){
     	console.log(error);
     });
-};
+};*/
 
 function iframe (address) {
 		var iFrameLocation = $('iframe');
