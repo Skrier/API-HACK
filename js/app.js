@@ -28,35 +28,34 @@ $('#aboutButton').on('mousedown', function(){
 
 var getGeoLocation = function (address) {
 
-	$.getJSON('http://dev.virtualearth.net/REST/v1/Locations?locality' + address + 'key=Atq5GRPbpmMXICsUMY6l2ILicZ3HNVgTqd0bVHPx8o5VCxWGadaKxUVArVrisehF&o=json&jsonp=?', function () {
-    alert('works!');
-});
-
-/*	var params = {
+	var params = {
 		key: 'Atq5GRPbpmMXICsUMY6l2ILicZ3HNVgTqd0bVHPx8o5VCxWGadaKxUVArVrisehF',
 		locality: address,
 		maxResults: '1',
-		o:'json&jsonp=?'
+		o:'jsonp=?'
 	};
     var request = $.ajax({
     	url: 'http://dev.virtualearth.net/REST/v1/Locations?',
     	data: params,
     	dataType: 'jsonp',
     	type: 'GET'
-    }).done(function(request){
+    })
+    .done(function(request){
     	console.log(request);
     	console.log(request.resourceSets.resources.geocodePoints.coordinates);
-    }).fail(function (jqXHR, error, errorThrown){
+    })
+    .fail(function (jqXHR, error, errorThrown){
     	console.log(error);
-    });*/
+    });
 };
 
+/* Google Api */
 function iframe (address) {
 		var iFrameLocation = $('iframe');
 		iFrameLocation.attr('src','https://www.google.com/maps/embed/v1/place?q=' +address+'&key=AIzaSyA9R0s5sg2INloAiY9IHOruKNHQgrN1dS0');
 }
 
- /* instgram Api */
+ /* instagram Api */
 
 
 
