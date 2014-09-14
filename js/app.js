@@ -28,21 +28,16 @@ $('#aboutButton').on('mousedown', function(){
 
 var getGeoLocation = function (address) {
 
-	 $.getJSON('http://dev.virtualearth.net/REST/v1/Locations?locality=' + address + '&key=Atq5GRPbpmMXICsUMY6l2ILicZ3HNVgTqd0bVHPx8o5VCxWGadaKxUVArVrisehF&jsonp=?', function(result) {
-                alert("got a result");
-            });
-
-	/*var params = {
+	var params = {
 		key: 'Atq5GRPbpmMXICsUMY6l2ILicZ3HNVgTqd0bVHPx8o5VCxWGadaKxUVArVrisehF',
 		locality: address,
-		maxResults: '1',
-		jsonp: '?'
+		maxResults: '1'
 	};
     var request = $.ajax({
     	url: 'http://dev.virtualearth.net/REST/v1/Locations?',
     	data: params,
     	dataType:'jsonp',
-    	type: 'GET',
+    	type: 'GET'
     })
     .done(function(request){
     	console.log(request);
@@ -50,13 +45,13 @@ var getGeoLocation = function (address) {
     })
     .fail(function (jqXHR, error, errorThrown){
     	console.log(error);
-    });*/
+    });
 };
 
 /* Google Api */
 function iframe (address) {
 		var iFrameLocation = $('iframe');
-		iFrameLocation.attr('src','https://www.google.com/maps/embed/v1/place?q=' +address+'&key=AIzaSyA9R0s5sg2INloAiY9IHOruKNHQgrN1dS0');
+		iFrameLocation.attr('src','https://www.google.com/maps/embed/v1/place?q=' +address+'&key=AIzaSyDex2UEUst7Y46h6_jlf4KDdVmY6ws8jGw');
 }
 
  /* instagram Api */
