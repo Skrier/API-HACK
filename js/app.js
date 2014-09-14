@@ -31,14 +31,15 @@ var getGeoLocation = function (address) {
 	var params = {
 		key: 'Atq5GRPbpmMXICsUMY6l2ILicZ3HNVgTqd0bVHPx8o5VCxWGadaKxUVArVrisehF',
 		locality: address,
-		maxResults: '1',
-		jsonp: 'jsonp'
+		maxResults: '1'
+		
 	};
     var request = $.ajax({
     	url: 'http://dev.virtualearth.net/REST/v1/Locations?',
     	data: params,
     	dataType:'jsonp',
-    	type: 'GET'
+    	type: 'GET',
+    	jsonp: 'jsonp'
     })
     .done(function(request){
     	console.log(request);
