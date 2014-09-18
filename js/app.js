@@ -1,62 +1,58 @@
 $(document).ready( function () {
-
-/* Navbar buttons*/
-function search () {
-    var address= $(document).find('input[name="search"]').val();
-    console.log(address);
-    iframe(address);
-    getGeoLocation(address);
-    
-}
-
-$('#searchButton').on('mousedown', function (event) { 
-	search();
-});
-
-$(document).find('input[name="search"]').on('keydown', function (event) {
-	event.stopPropagation();
-	if (event.which === 13) {
-    search();
+	/* Navbar buttons*/
+	function search () {
+	    var address= $(document).find('input[name="search"]').val();
+	    console.log(address);
+	    iframe(address);
+	    getGeoLocation(address);
+	    
 	}
-});
 
-$('#aboutButton').on('mousedown', function(){
+	$('#searchButton').on('mousedown', function (event) { 
+		search();
+	});
 
- });
+	$(document).find('input[name="search"]').on('keyup', function (event) {
+		event.stopPropagation();
+		if (event.which === 13) {
+	    search();
+		}
+	});
 
-/* Bing API */
+	$('#aboutButton').on('mousedown', function(){
 
-var getGeoLocation = function (address) {
-
-	var params = {
-		key: 'Atq5GRPbpmMXICsUMY6l2ILicZ3HNVgTqd0bVHPx8o5VCxWGadaKxUVArVrisehF',
-		locality: address,
-		maxResults: '1'
-		
+	 });
+	/* Bing API */
+	var getGeoLocation = function (address) {
+		var params = {
+			key: 'Atq5GRPbpmMXICsUMY6l2ILicZ3HNVgTqd0bVHPx8o5VCxWGadaKxUVArVrisehF',
+			locality: address,
+			maxResults: '1'	
+		};
+	    var request = $.ajax({
+	    	url: 'http://dev.virtualearth.net/REST/v1/Locations?',
+	    	data: params,
+	    	dataType:'jsonp',
+	    	type: 'GET',
+	    	jsonp: 'jsonp'
+	    })
+	    .done(function(request){
+	    	console.log(request);
+	    	var lat = console.log(request.resourceSets.geocodePoints.coordinates[0]);
+	    	var long = console.log(request.resourceSets.geocodePoints.coordinates[1]);
+	    	return lat
+	    	return long
+	    })
+	    .fail(function (jqXHR, error, errorThrown){
+	    	console.log(error);
+	    });
 	};
-    var request = $.ajax({
-    	url: 'http://dev.virtualearth.net/REST/v1/Locations?',
-    	data: params,
-    	dataType:'jsonp',
-    	type: 'GET',
-    	jsonp: 'jsonp'
-    })
-    .done(function(request){
-    	console.log(request);
-    	console.log(request.authenticationResultCode);
-    })
-    .fail(function (jqXHR, error, errorThrown){
-    	console.log(error);
-    });
-};
-
-/* Google Api */
-function iframe (address) {
-		var iFrameLocation = $('iframe');
-		iFrameLocation.attr('src','https://www.google.com/maps/embed/v1/place?q=' +address+'&key=AIzaSyDex2UEUst7Y46h6_jlf4KDdVmY6ws8jGw');
-}
-
- /* instagram Api */
+	/* Google Api */
+	function iframe (address) {
+			var iFrameLocation = $('iframe');
+			iFrameLocation.attr('src','https://www.google.com/maps/embed/v1/place?q=' +address+'&key=AIzaSyDex2UEUst7Y46h6_jlf4KDdVmY6ws8jGw');
+	}
+	 /* instagram Api */
 
 
 
