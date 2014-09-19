@@ -48,8 +48,8 @@ $(document).ready( function () {
 	    })
 	    .done(function(request){
 	    	console.log(request);
-	    	lat = console.log(request.resourceSets[0].resources[0].point.coordinates[0]);
-	    	long = console.log(request.resourceSets[0].resources[0].point.coordinates[1]);
+	    	lat = request.resourceSets[0].resources[0].point.coordinates[0];
+	    	long = request.resourceSets[0].resources[0].point.coordinates[1];
 	    	return lat
 	    	return long
 	    })
@@ -80,7 +80,7 @@ $(document).ready( function () {
         })
         .done(function(request){
         	console.log(request);
-        	console.log(request.data[0].id);
+        	id = console.log(request.data[0].id);
         })
         .fail(function (jqXHR, error, errorThrown){
 	    	console.log(error);
