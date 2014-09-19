@@ -13,7 +13,7 @@ $(document).ready( function () {
 	    getLocationID(); 
 	    getLocationMedia(id);  
 	    console.log(lat);
-	    console.log(long);
+	    console.log(long);-
 	    console.log(id);
 	}
 
@@ -61,7 +61,7 @@ $(document).ready( function () {
 			iFrameLocation.attr('src','https://www.google.com/maps/embed/v1/place?q=' +address+'&key=AIzaSyDex2UEUst7Y46h6_jlf4KDdVmY6ws8jGw');
 	} 
 	/* instagram Api */
-	var getLocationID = function() {
+	var getLocationID = function(lat,long) {
 		var lat = lat;
 		var long = long;
         var params = {
@@ -86,7 +86,7 @@ $(document).ready( function () {
 	    });       
 	};
 
-	var getLocationMedia = function () {
+	var getLocationMedia = function (id) {
 		var id = id;
 		var params = {
         	client_id: '247fae46590145138b72d9e2d47d9231' 
