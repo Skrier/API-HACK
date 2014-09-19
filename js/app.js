@@ -8,6 +8,9 @@ $(document).ready( function () {
 	function search () {
 	    var address= $(document).find('input[name="search"]').val();
 	    console.log(address);
+	    console.log(lat);
+	    console.log(long);
+	    console.log(id);
 	    iframe(address);
 	    getGeoLocation(address);
 	    getLocationID(lat,long); 
