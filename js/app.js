@@ -80,7 +80,7 @@ $(document).ready( function () {
         })
         .done(function(request){
         	console.log(request);
-        	id = console.log(request.data[0].id);
+        	id = request.data[0].id;
         })
         .fail(function (jqXHR, error, errorThrown){
 	    	console.log(error);
@@ -88,7 +88,7 @@ $(document).ready( function () {
 	};
 
 	var getLocationMedia = function (id) {
-		var id = 788029;
+		var id = '788029';
 		var params = {
         	client_id: '247fae46590145138b72d9e2d47d9231' 
 		}
