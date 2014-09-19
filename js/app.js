@@ -101,7 +101,7 @@ $(document).ready( function () {
         })
         .done(function(request){
         	console.log(request);
-        	console.log(request.data.images.thumbnail.url);
+        	console.log(request.data[0].images.thumbnail.url);
         })
         .fail(function (jqXHR, error, errorThrown){
 	    	console.log(error);
