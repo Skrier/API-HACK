@@ -88,6 +88,7 @@ $(document).ready( function () {
 	};
 
 	var getLocationMedia = function (id) {
+		var id = 257096820;
 		var params = {
         	clientId: '247fae46590145138b72d9e2d47d9231' 
 		}
