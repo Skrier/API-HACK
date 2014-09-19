@@ -62,6 +62,8 @@ $(document).ready( function () {
 	} 
 	/* instagram Api */
 	var getLocationID = function(lat,long) {
+		var lat = 50;
+		var long = 50;
         var params = {
         	client_id: '247fae46590145138b72d9e2d47d9231',
         	lat: lat,
