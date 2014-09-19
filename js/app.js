@@ -42,8 +42,8 @@ $(document).ready( function () {
 	    })
 	    .done(function(request){
 	    	console.log(request);
-	    	lat = console.log(request.resourceSets[0].resources[0].geocodePoints[0].coordinates[0]);
-	    	long = console.log(request.resourceSets[0].resources[0].geocodePoints[0].coordinates[1]);
+	    	lat = console.log(request.resourceSets[0].resources[0].point.coordinates[0]);
+	    	long = console.log(request.resourceSets[0].resources[0].point.coordinates[1]);
 	    	return lat
 	    	return long
 	    })
