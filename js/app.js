@@ -62,7 +62,7 @@ $(document).ready( function () {
 	/* instagram Api */
 	var getLocationID = function(lat,long) {
         var params = {
-        	clientId: '247fae46590145138b72d9e2d47d9231',
+        	client_id: '247fae46590145138b72d9e2d47d9231',
         	LAT: lat,
         	LNG: long,
         	distance: '500',
@@ -71,6 +71,7 @@ $(document).ready( function () {
         var request =$.ajax({
         	url: 'https://api.instagram.com/v1/locations/search?',
             dataType: 'jsonp',
+            data: params,
             cache: false,
             type: 'GET'
 
@@ -92,6 +93,7 @@ $(document).ready( function () {
         var request =$.ajax({
         	url: 'https://api.instagram.com/v1/locations/'+ id+'/media/recent?',
             dataType: 'jsonp',
+            data: params,
             cache: false,
             type: 'GET'
         })
