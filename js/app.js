@@ -104,7 +104,7 @@ $(document).ready( function () {
         	console.log(request.data[0].images.thumbnail.url);
         	for (x=0; x <= 12; x+=1) {
         		var imageHolder = '<img alt="instaImage" class="instaImages">'
-        		imageHolder.attr('src' request.data[x].thumbnail.url);
+        		imageHolder.attr('src', request.data[x].images.thumbnail.url);
         		$('#geoImages').append(imageHolder);
         	}
         })
