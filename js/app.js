@@ -62,9 +62,9 @@ $(document).ready( function () {
 	/* instagram Api */
 	var getLocationID = function(lat,long) {
         var params = {
-        	client_id: '247fae46590145138b72d9e2d47d9231',
+        	clientId: '247fae46590145138b72d9e2d47d9231',
         	LAT: lat,
-        	lNG: long,
+        	LNG: long,
         	distance: '500',
         	callback: 'callbackFunction'
         };
@@ -86,7 +86,7 @@ $(document).ready( function () {
 
 	var getLocationMedia = function (id) {
 		var params = {
-        	client_id: '247fae46590145138b72d9e2d47d9231',  
+        	clientId: '247fae46590145138b72d9e2d47d9231',  
         	callback: 'callbackFunction'
 		}
         var request =$.ajax({
