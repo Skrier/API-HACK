@@ -22,8 +22,8 @@ $(document).ready( function () {
 	});
 
 	$('#textBox').on('keyup', function (event) {
-		event.stopPropagation();
 		if (event.which === 13) {
+		event.stopPropagation();	
 	    search();
 		}
 	});
@@ -50,8 +50,6 @@ $(document).ready( function () {
 	    	console.log(request);
 	    	lat = request.resourceSets[0].resources[0].point.coordinates[0];
 	    	long = request.resourceSets[0].resources[0].point.coordinates[1];
-	    	return lat
-	    	return long
 	    })
 	    .fail(function (jqXHR, error, errorThrown){
 	    	console.log(error);
@@ -66,8 +64,8 @@ $(document).ready( function () {
 	var getLocationID = function(lat,long) {
         var params = {
         	client_id: '247fae46590145138b72d9e2d47d9231',
-        	LAT: lat,
-        	LNG: long,
+        	lat: lat,
+        	lng: long,
         	distance: '500'
         };
         var request =$.ajax({
