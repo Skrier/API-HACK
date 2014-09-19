@@ -13,7 +13,7 @@ $(document).ready( function () {
 	    getLocationID(); 
 	    getLocationMedia(id);  
 	    console.log(lat);
-	    console.log(long);-
+	    console.log(long);
 	    console.log(id);
 	}
 
@@ -24,6 +24,7 @@ $(document).ready( function () {
 	$('#textBox').on('keyup', function (event) {
 		if (event.which === 13) {
 		event.stopPropagation();	
+		event.preventDefault();
 	    search();
 		}
 	});
@@ -68,7 +69,7 @@ $(document).ready( function () {
         	client_id: '247fae46590145138b72d9e2d47d9231',
         	lat: lat,
         	lng: long,
-        	distance: '500'
+        	distance: '1500'
         };
         var request =$.ajax({
         	url: 'https://api.instagram.com/v1/locations/search?',
@@ -101,6 +102,11 @@ $(document).ready( function () {
         .done(function(request){
         	console.log(request);
         	console.log(request.data[0].images.thumbnail.url);
+        	for (x=0; x <= 12; x+=1) {
+        		var imageHolder = '<img alt="instaImage" class="instaImages">'
+        		imageHolder.attr('src' request.data[x].thumbnail.url);
+        		$('#geoImages').append(imageHolder);
+        	}
         })
         .fail(function (jqXHR, error, errorThrown){
 	    	console.log(error);
