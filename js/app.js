@@ -1,4 +1,8 @@
 $(document).ready( function () {
+    /* Gloabl variables*/
+    var lat;
+    var long;
+
 	/* Navbar buttons*/
 	function search () {
 	    var address= $(document).find('input[name="search"]').val();
@@ -38,8 +42,8 @@ $(document).ready( function () {
 	    })
 	    .done(function(request){
 	    	console.log(request);
-	    	var lat = console.log(request.resourceSets[0].resources.geocodePoints.coordinates[0]);
-	    	var long = console.log(request.resourceSets[0].resources.geocodePoints.coordinates[1]);
+	    	lat = console.log(request.resourceSets[0].resources[0].geocodePoints[0].coordinates[0]);
+	    	long = console.log(request.resourceSets[0].resources[0].geocodePoints[0].coordinates[1]);
 	    	return lat
 	    	return long
 	    })
